@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/forex.css" />
+    <title>Forex Converter</title>
+  </head>
+  <h1>Foreign Exchange Converter</h1>
+  <body>
+    <section id="converter">
+      <div class="form-window">
+        {% for msg in get_flashed_messages() %}
+        <div class="msg">
+          <p>{{msg}}</p>
+        </div>
+        {% endfor %}
+        <form method="POST">
+          <label for="InitialCurr">Converting from:</label>
+          <input
+            type="text"
+            placeholder="USD"
+            name="InitialCurr"
+            maxlength="3"
+          />
+          <br />
+          <label for="DesiredCurr">Converting to:</label>
+          <input
+            type="text"
+            placeholder="CDN"
+            name="DesiredCurr"
+            maxlength="3"
+          />
+          <br />
+          <label for="Amount">Amount:</label>
+          <input type="text" placeholder="0.00" name="Amount" />
+          <br />
+          <button>Convert!</button>
+        </form>
+        <div class="results">{{res_data}}</div>
+      </div>
+    </section>
+  </body>
+</html>

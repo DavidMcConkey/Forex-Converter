@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+
+#converter {
+  text-align: center;
+}
+
+input {
+  margin: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+.results {
+  position: absolute;
+  bottom: 50px;
+}
